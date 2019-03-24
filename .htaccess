@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule ^feed.xml$ feed.php [L]
+RewriteRule ^feed.([a-z]+).xml$ feed.php?source=$1 [L]
+
+RewriteRule ^([0-9]+\.mp3)$ download.php?file=$1 [QSA,L]
